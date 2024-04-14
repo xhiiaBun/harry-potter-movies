@@ -1,0 +1,40 @@
+<h1>Harry Potter - Movies</h1>
+<div class="container-page">
+    <!-- init: Filters -->
+    <div class="row wrapper-filter-section">
+        <h2>Filters</h2>
+        <div class="wrapper-form">
+            <label>Title</label>
+            <input type="text" [formControl]="filterTitle">
+        </div>
+        <div class="wrapper-form">
+            <label>Release year</label>
+            <input type="text" [formControl]="filterRelease">
+        </div>
+    </div>
+    <!-- end: Filters -->
+
+    <!-- init: list Movies -->
+    <div class="row-cols-md-8">
+        <!-- movie | row -->
+        <div class="col wrapper-movie" *ngFor="let movie of filterMovieList$ | async">
+            <div class="row">
+                <h3>{{movie.title}}</h3>
+                <div class="col-8 col-xs-12">
+                    <ul class="movie-list-info">
+                        <li>Release date: {{movie.release_date}}</li>
+                        <li>Budget: {{movie.budget | numberAmilli}}</li>
+                        <li>Duration: {{movie.duration | timetoHrmin}}</li>
+                    </ul>
+                </div>
+                <div class="col-4 col-xs-12 text-start">
+                    <button id="{{movie.id}}" [routerLink]="['/movie', movie.id]">Details</button>
+                </div>      
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning-fill" viewBox="0 0 16 16">
+                <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641z"/>
+            </svg>
+        </div>
+    </div>
+    <!-- end: list Movies -->
+</div>

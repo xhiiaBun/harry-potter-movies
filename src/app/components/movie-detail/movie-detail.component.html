@@ -1,0 +1,49 @@
+<h1>Harry Potter - Details</h1>
+<div class="row">
+    <button [routerLink]="'/'" class="iback-btn">Back</button>
+    <div class="container-form">
+        <!-- init: poster + summary -->
+        <div class="row justify-content-md-center">
+            <h2>{{currentMovie.title}}</h2>
+            <div class="row">
+                <div class="col-4 text-end">
+                    <img src="{{currentMovie.poster}}" width="200" alt="Poster movie"/>
+                </div>
+                
+                <div class="col-6 text-start wrapper-summary">
+                    {{currentMovie.summary}}
+                </div>
+            </div>
+        </div>
+        <!-- end: poster + summary -->
+        <!-- init: table details -->
+        <div class="row justify-content-md-center">
+            <div class="col-8">
+                <h3>Details</h3>
+                <table>
+                    <tr>
+                        <th class="text-end">Box office </th>
+                        <td class="text-start">{{currentMovie.box_office | numberAmilli}}</td>
+                    </tr>
+                    <tr>
+                        <th class="text-end">Budget</th>
+                        <td class="text-start">{{currentMovie.budget | numberAmilli}}</td>
+                    </tr>
+                    <tr>
+                        <th class="text-end">Duration</th>
+                        <td class="text-start">{{currentMovie.duration | timetoHrmin}}</td>
+                    </tr>
+                    <tr>
+                        <th class="text-end">Producers</th>
+                        <td class="text-start">{{currentMovie.producers}}</td>
+                    </tr>
+                    <tr>
+                        <th class="text-end">Cinematographers</th>
+                        <td class="text-start">{{currentMovie.cinematographers}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- end: table details -->
+    </div>
+</div>
