@@ -6,11 +6,11 @@
         <div class="row justify-content-md-center">
             <h2>{{currentMovie.title}}</h2>
             <div class="row">
-                <div class="col-4 text-end">
+                <div class="col-md-4 col-xs-12 poster-mvie">
                     <img src="{{currentMovie.poster}}" width="200" alt="Poster movie"/>
                 </div>
                 
-                <div class="col-6 text-start wrapper-summary">
+                <div class="col-md-6 col-xs-12 wrapper-summary">
                     {{currentMovie.summary}}
                 </div>
             </div>
@@ -18,29 +18,29 @@
         <!-- end: poster + summary -->
         <!-- init: table details -->
         <div class="row justify-content-md-center">
-            <div class="col-8">
+            <div class="col-md-8 col-xs-12">
                 <h3>Details</h3>
-                <table>
-                    <tr>
-                        <th class="text-end">Box office </th>
-                        <td class="text-start">{{currentMovie.box_office | numberAmilli}}</td>
-                    </tr>
-                    <tr>
-                        <th class="text-end">Budget</th>
-                        <td class="text-start">{{currentMovie.budget | numberAmilli}}</td>
-                    </tr>
-                    <tr>
-                        <th class="text-end">Duration</th>
-                        <td class="text-start">{{currentMovie.duration | timetoHrmin}}</td>
-                    </tr>
-                    <tr>
-                        <th class="text-end">Producers</th>
-                        <td class="text-start">{{currentMovie.producers}}</td>
-                    </tr>
-                    <tr>
-                        <th class="text-end">Cinematographers</th>
-                        <td class="text-start">{{currentMovie.cinematographers}}</td>
-                    </tr>
+                <table class="table table-details">
+                        <tr>
+                            <th scope="row" class="text-end">Box office </th>
+                            <td class="text-start">{{currentMovie.box_office | numberAmilli}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-end">Budget</th>
+                            <td class="text-start">{{currentMovie.budget | numberAmilli}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-end">Duration</th>
+                            <td class="text-start">{{currentMovie.duration | timetoHrmin}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-end">Producers</th>
+                            <td class="text-start">{{currentMovie.producers}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-end">Cinematographers</th>
+                            <td class="text-start">{{currentMovie.cinematographers}}</td>
+                        </tr>
                 </table>
             </div>
         </div>

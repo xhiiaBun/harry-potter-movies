@@ -20,14 +20,14 @@
         <div class="col wrapper-movie" *ngFor="let movie of filterMovieList$ | async">
             <div class="row">
                 <h3>{{movie.title}}</h3>
-                <div class="col-8 col-xs-12">
+                <div class="col-md-8 col-xs-12">
                     <ul class="movie-list-info">
                         <li>Release date: {{movie.release_date}}</li>
                         <li>Budget: {{movie.budget | numberAmilli}}</li>
                         <li>Duration: {{movie.duration | timetoHrmin}}</li>
                     </ul>
                 </div>
-                <div class="col-4 col-xs-12 text-start">
+                <div class="col-md-4 col-xs-12 text-center">
                     <button id="{{movie.id}}" [routerLink]="['/movie', movie.id]">Details</button>
                 </div>      
             </div>

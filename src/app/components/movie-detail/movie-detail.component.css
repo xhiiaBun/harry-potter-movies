@@ -11,5 +11,30 @@
 }
 .wrapper-summary{
     padding: 20px 0;
+    text-align: start;
     font-family: cursive;
 }
+.poster-mvie{
+    text-align: end;
+}
+@media (max-width: 767.98px) {
+    .poster-mvie{
+        text-align: center;
+    }
+    .wrapper-summary{
+        padding-left: 10px;
+    }
+    table.table-details tr{
+        display: revert;
+    }
+    table.table-details tr th{
+        width: fit-content;
+        margin: auto;
+        overflow: unset;
+        padding: auto;
+        position: initial;
+        clip: unset;
+        -webkit-clip-path: unset;
+        clip-path: unset;
+    }
+ }
